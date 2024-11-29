@@ -20,6 +20,7 @@ export default [
   // 添加自定义规则覆盖
   {
     rules: {
+      // 关闭校验组件名称
       'vue/multi-word-component-names': 'off'
     }
   }

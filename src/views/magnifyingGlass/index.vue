@@ -3,7 +3,7 @@ import MagnifyingGlass from '@/components/magnifyingGlass.vue'
 import { ref } from 'vue'
 
 // 放大镜图片数据
-const magnifyinigLiist = ref([
+const magnifyingList = ref([
   {
     url: 'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg'
   },
@@ -34,7 +34,7 @@ const magnifyinigLiist = ref([
 <template>
   <div class="main">
     <!--  放大镜  -->
-    <magnifying-glass class="m-auto mt-10" :list="magnifyinigLiist" />
+    <magnifying-glass class="m-auto mt-10" :list="magnifyingList" />
   </div>
 </template>
 

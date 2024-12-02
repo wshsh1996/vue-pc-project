@@ -21,7 +21,9 @@ export default [
   {
     rules: {
       // 关闭校验组件名称
-      'vue/multi-word-component-names': 'off'
+      'vue/multi-word-component-names': 'off',
+      // 关闭校验any类型
+      '@typescript-eslint/no-explicit-any': 'off'
     }
   }
 ]

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // 当前激活的图片索引
 import { onMounted, reactive, ref } from 'vue'
+import type { PicItem } from '@/type/magnifying'
 
 const props = defineProps<{
   list: Array<{ url: string }>
@@ -15,7 +16,7 @@ const activeStyle = reactive({
   height: '450px'
 })
 
-const picList = ref<any[]>([])
+const picList = ref<PicItem[]>([])
 
 const gallerysStyle = reactive({
   marginLeft: '0px'
@@ -29,16 +30,16 @@ const maxMarginLeft = ref(0)
 const peakMarginLeft = ref(0)
 
 // 新增 每次移动多少距离
-const division = (numerator, denominator) => {
+const division = (numerator: number, denominator: number) => {
   return numerator / denominator
 }
 
 /** 鼠标悬浮 */
-const handleGalleryMouseover = (pic, index) => {
+const handleGalleryMouseover = (pic: PicItem, index: number) => {
   activePicIndex.value = index // 当前索引
   activePicUrl.value = pic.url // 图片url
 }
-let timer = null
+let timer: any = null
 /** 缩略图栏：向右移动 */
 const handleNext = () => {
   // 当前移动的距离
@@ -89,7 +90,7 @@ const handlePrev = () => {
 }
 
 /** 获取图片样式：激活或未激活 */
-const getImgClass = (index) => {
+const getImgClass = (index: number) => {
   return activePicIndex.value === index ? 'thumb-img is-active' : 'thumb-img'
 }
 
@@ -128,11 +129,11 @@ const getViewportOffset = (element: HTMLElement): { top: number; left: number } 
 // 放大比例：
 const rate = 450 / 160
 /** 在商品图片区域上移动 */
-const handleZoomMousemove = (e) => {
+const handleZoomMousemove = (e: MouseEvent) => {
   const zoom = document.getElementById('zoom')
   const bigPic = document.getElementById('big-pic')
   const wapper = document.getElementById('wapper')
-  const wapperOffset = getViewportOffset(wapper)
+  const wapperOffset = getViewportOffset(wapper as HTMLElement)
   // 获得鼠标如何移动的方式：根据鼠标方向移动:移动的像素是多少
   // e.clientX  e.clientY : 鼠标相对于页面左上角的位置
   // wapperOffset.left  wapperOffset.top ：图片展示框距离页面左上角的位置

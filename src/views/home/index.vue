@@ -3,7 +3,8 @@
 <template>
   <div class="flex ac jc h100vh">
     <router-link class="mr-20" to="/magnifying">商城放大镜</router-link>
-    <router-link to="/imageUpload">上传文件（拖拽）</router-link>
+    <router-link class="mr-20" to="/imageUpload">上传文件（拖拽）</router-link>
+    <router-link class="mr-20" to="/table">table表格拖拽</router-link>
   </div>
 </template>
 

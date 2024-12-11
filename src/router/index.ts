@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/imageUpload',
       name: 'imageUpload',
       component: () => import('@/views/imageUpload/index.vue')
+    },
+    {
+      path: '/table',
+      name: 'table',
+      component: () => import('@/views/table/index.vue')
     }
   ]
 })

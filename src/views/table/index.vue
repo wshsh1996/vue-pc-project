@@ -13,11 +13,15 @@ const initialSortable = () => {
   const el: any = document.querySelector('tbody')
   Sortable.create(el, {
     animation: 150,
+    ghostClass: 'blue-background-class',
+    onStart: (evt: any) => {
+      evt.item.style.backgroundColor = 'pink'
+    },
+
     onEnd: (evt: any) => {
       const { oldIndex, newIndex } = evt
       tableData.value.splice(newIndex, 0, tableData.value.splice(oldIndex, 1)[0])
-      console.log(oldIndex, 'oldIndex')
-      console.log(newIndex, 'newIndex')
+      evt.item.style.backgroundColor = '#fff'
     }
   })
 }
@@ -45,4 +49,8 @@ onMounted(() => {
   </el-table>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.blue-background-class {
+  background-color: pink;
+}
+</style>

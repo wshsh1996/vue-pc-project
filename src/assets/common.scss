@@ -19,6 +19,10 @@ div,p,ul,li {
   height: 100%;
 }
 
+.h100vh {
+  height: 100vh;
+}
+
 /* 文字位置 */
 .ta-right {
   text-align: right;
@@ -31,6 +35,10 @@ div,p,ul,li {
   text-align: center;
 }
 
+/* 背景颜色 */
+.bg-pink {
+  background-color: pink;
+}
 /* margin */
 .m-auto {
   margin: 0 auto;
@@ -127,4 +135,36 @@ div,p,ul,li {
 }
 .mr-10 {
   margin-right: 10px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+
+/* flex布局 */
+.flex {
+  display: flex;
+}
+
+.ae {
+  align-content: flex-end;
+}
+
+.ac {
+  align-items: center;
+}
+
+.je {
+  justify-content: flex-end;
+}
+
+.jc {
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
 }

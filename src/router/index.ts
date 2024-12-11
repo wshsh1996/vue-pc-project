@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/magnifying',
       name: 'magnifying',
       component: () => import('@/views/magnifyingGlass/index.vue')
+    },
+    {
+      path: '/imageUpload',
+      name: 'imageUpload',
+      component: () => import('@/views/imageUpload/index.vue')
     }
   ]
 })

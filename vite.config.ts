@@ -31,6 +31,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
    *
    * 返回的是一个环境变量对象。这个对象包含了根据指定模式 (mode) 加载的所有环境变量。
    * 这些环境变量会被加载到 import.meta.env 中，在整个项目中可以方便地访问
+   *
+   * 具体可查看vite官网：https://cn.vitejs.dev/guide/env-and-mode.html
    * */
   const env = loadEnv(mode, process.cwd())
   console.log(env, 'env')

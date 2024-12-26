@@ -22,6 +22,11 @@ const router = createRouter({
       path: '/table',
       name: 'table',
       component: () => import('@/views/table/index.vue')
+    },
+    {
+      path: '/self-adaptation',
+      name: 'self-adaptation',
+      component: () => import('@/views/self-adaptation/index.vue')
     }
   ]
 })

@@ -1,10 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const routerList = ref([
+  { path: '/magnifying', name: '商城放大镜' },
+  { path: '/imageUpload', name: '上传文件（拖拽）' },
+  { path: '/table', name: 'table表格拖拽' },
+  { path: '/self-adaptation', name: '自适应布局' }
+])
+</script>
 
 <template>
   <div class="flex ac jc h100vh">
-    <router-link class="mr-20" to="/magnifying">商城放大镜</router-link>
-    <router-link class="mr-20" to="/imageUpload">上传文件（拖拽）</router-link>
-    <router-link class="mr-20" to="/table">table表格拖拽</router-link>
+    <router-link v-for="item in routerList" :key="item.path" class="mr-20" :to="item.path">{{ item.name }}</router-link>
   </div>
 </template>
 

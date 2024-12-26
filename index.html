@@ -3,11 +3,41 @@
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+      <meta name="viewport" id="WebViewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <title>Vite App</title>
+      <script>
+          /**
+           * 该 JavaScript 代码的主要目的是确保页面在不同设备和屏幕分辨率下能够正确缩放和显示
+           * ，特别是在高像素密度的屏幕上（如 Retina 屏幕）提供更好的视觉体验。
+           * */
+          const setViewport = () => {
+              const devicePixelRatio = window.devicePixelRatio || 1;
+              console.log(window.devicePixelRatio,'window')
+              console.log(devicePixelRatio,'devicePixelRatio')
+              let viewportContent = 'width=device-width, initial-scale=1.0';
+
+              if (devicePixelRatio === 2) {
+                  viewportContent = 'initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no';
+              } else if (devicePixelRatio === 3) {
+                  viewportContent = 'initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no';
+              }
+
+              const metaViewport = document.querySelector('meta[name="viewport"]');
+              if (metaViewport) {
+                  metaViewport.setAttribute('content', viewportContent);
+              }
+          }
+
+          // 在页面加载时设置视口
+          window.addEventListener('load', setViewport);
+          // 在设备像素比变化时重新设置视口
+          window.addEventListener('resize', setViewport);
+      </script>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module"  src="/src/main.ts">
+
+    </script>
   </body>
 </html>

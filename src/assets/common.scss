@@ -23,6 +23,11 @@ div,p,ul,li {
   height: 100vh;
 }
 
+/* 鼠标样式 */
+.pointer {
+  cursor: pointer;
+}
+
 /* 文字位置 */
 .ta-right {
   text-align: right;
@@ -34,6 +39,20 @@ div,p,ul,li {
 .center {
   text-align: center;
 }
+
+/* 字体颜色 */
+.col-fff {
+  color: #fff;
+}
+
+.col-green {
+  color: #00ff00;
+}
+
+.col-red {
+  color: #ca141d;
+}
+
 
 /* 背景颜色 */
 .bg-pink {
@@ -113,6 +132,9 @@ div,p,ul,li {
 }
 .mb-10 {
   margin-bottom: 10px;
+}
+.mb-40 {
+  margin-bottom: 40px;
 }
 
 .mr-3 {

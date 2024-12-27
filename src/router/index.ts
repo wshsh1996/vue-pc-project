@@ -27,6 +27,11 @@ const router = createRouter({
       path: '/self-adaptation',
       name: 'self-adaptation',
       component: () => import('@/views/self-adaptation/index.vue')
+    },
+    {
+      path: '/border-image',
+      name: 'border-image',
+      component: () => import('@/views/border-image/index.vue')
     }
   ]
 })

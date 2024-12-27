@@ -6,7 +6,8 @@ const routerList = ref([
   { path: '/imageUpload', name: '上传文件（拖拽）' },
   { path: '/table', name: 'table表格拖拽' },
   { path: '/self-adaptation', name: '自适应布局' },
-  { path: '/border-image', name: 'border-image属性' }
+  { path: '/border-image', name: 'border-image属性' },
+  { path: '/collapse', name: '折叠面板' }
 ])
 </script>
 

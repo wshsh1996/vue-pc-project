@@ -32,6 +32,11 @@ const router = createRouter({
       path: '/border-image',
       name: 'border-image',
       component: () => import('@/views/border-image/index.vue')
+    },
+    {
+      path: '/collapse',
+      name: 'collapse',
+      component: () => import('@/views/collapse/index.vue')
     }
   ]
 })

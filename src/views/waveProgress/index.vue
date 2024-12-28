@@ -75,7 +75,7 @@ onMounted(() => {
   border-radius: 40%;
   background: #6495ed;
   /* 添加旋转动画效果 */
-  animation: progressRotate 2.5s linear infinite;
+  animation: progressRotate 5s linear infinite;
   /* 由于上面使用了transform 且动画中也使用了transform 设置该属性使其叠加生效 */
   animation-composition: add;
 }

@@ -7,7 +7,8 @@ const routerList = ref([
   { path: '/table', name: 'table表格拖拽' },
   { path: '/self-adaptation', name: '自适应布局' },
   { path: '/border-image', name: 'border-image属性' },
-  { path: '/collapse', name: '折叠面板' }
+  { path: '/collapse', name: '折叠面板' },
+  { path: '/wave-progress', name: '波浪进度' }
 ])
 </script>
 

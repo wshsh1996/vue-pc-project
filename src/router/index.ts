@@ -37,6 +37,11 @@ const router = createRouter({
       path: '/collapse',
       name: 'collapse',
       component: () => import('@/views/collapse/index.vue')
+    },
+    {
+      path: '/wave-progress',
+      name: 'wave-progress',
+      component: () => import('@/views/waveProgress/index.vue')
     }
   ]
 })

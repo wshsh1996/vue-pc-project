@@ -1,6 +1,7 @@
 <template>
   <div class="slider-box">
     <slide-verify
+      class="mb-10"
       :l="42"
       :r="10"
       :w="400"
@@ -39,8 +40,8 @@ import 'vue3-slide-verify/dist/style.css'
 const emits = defineEmits(['update:modelValue'])
 defineProps({
   modelValue: {
-    type: String,
-    default: 'false'
+    type: Boolean,
+    default: false
   }
 })
 
@@ -113,8 +114,6 @@ const onRefresh = () => {
 
 <style lang="scss" scoped>
 .slider-box {
-  margin: 0 auto;
-  width: 400px;
   // 验证结果
   .slide-tip-text {
     padding-left: 5px;

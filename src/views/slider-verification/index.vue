@@ -4,7 +4,9 @@
     <simple-verification v-model="verificationBoolean" class="mb-20"></simple-verification>
     <!--  带图片的滑块验证 前端写死的校验  -->
     <!--  安装vue3-slide-verify地址：https://gitee.com/monoplasty/vue3-slide-verify  -->
-    <image-verification v-model="verificationBoolean" class="mb-20"></image-verification>
+    <div class="image-box">
+      <image-verification v-model="verificationBoolean" class="mb-20 image-slider"></image-verification>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
@@ -28,5 +30,14 @@ watch(
 .content {
   margin: 10px auto;
   width: 600px;
+  .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image-slider {
+      padding: 20px;
+      background-color: #ececee;
+    }
+  }
 }
 </style>

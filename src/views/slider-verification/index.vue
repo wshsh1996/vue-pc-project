@@ -4,7 +4,7 @@
     <simple-verification v-model="verificationBoolean" class="mb-20"></simple-verification>
     <!--  带图片的滑块验证 前端写死的校验  -->
     <!--  安装vue3-slide-verify地址：https://gitee.com/monoplasty/vue3-slide-verify  -->
-    <image-verification></image-verification>
+    <image-verification v-model="verificationBoolean" class="mb-20"></image-verification>
   </div>
 </template>
 <script lang="ts" setup>

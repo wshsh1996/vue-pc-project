@@ -7,12 +7,17 @@
     <div class="image-box">
       <image-verification v-model="verificationBoolean" class="mb-20 image-slider"></image-verification>
     </div>
+    <!--  带文字的点击验证 前端写死的校验  -->
+    <div class="image-box">
+      <text-verification></text-verification>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 import SimpleVerification from '@/components/slider/simple-verification.vue'
 import ImageVerification from '@/components/slider/image-verification.vue'
+import TextVerification from '@/components/slider/text-verification.vue'
 
 const verificationBoolean = ref(false)
 

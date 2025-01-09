@@ -14,9 +14,16 @@ const routerList = ref([
 </script>
 
 <template>
-  <div class="flex ac jc h100vh">
-    <router-link v-for="item in routerList" :key="item.path" class="mr-20" :to="item.path">{{ item.name }}</router-link>
+  <div class="flex ac wrap main">
+    <router-link v-for="item in routerList" :key="item.path" class="mr-20 mb-10" :to="item.path">{{
+      item.name
+    }}</router-link>
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.main {
+  margin: 50px auto;
+  width: 800px;
+}
+</style>

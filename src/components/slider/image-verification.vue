@@ -67,7 +67,6 @@ const handleClick = () => {
 .slider-box {
   margin: 0 auto;
   width: 400px;
-  height: 200px;
   .btn {
     margin-top: 20px;
     outline: 0;

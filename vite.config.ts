@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   /**
-   * command =》 build || serve
+   * command =》 build: 开发环境 || serve: 生产环境
    * */
 
   /**
